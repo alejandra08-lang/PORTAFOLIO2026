@@ -1,0 +1,221 @@
+/*=============== SECCION PROYECTO ==========*/
+
+.projects-section{
+
+    min-height: calc(100vh - 80px);
+    padding: 100px 10% 80px;
+}
+
+/*===============ENCABEZADO ===========*/
+
+.projects-tag{
+
+    display: inline-block;
+    color: #8b5cf6;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.section-tag {
+    display: inline-block;
+    color: #8b5cf6;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.projects-header h1{
+
+    margin: 0;
+    color: #f8fafc;
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.15;
+}
+
+.projects-header h1 span{
+
+    color: #8b5cf6;
+}
+
+.projects-header p{
+
+    margin-top: 20px;
+    color: #94a3b8;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+/*============= GRID DE PROYECTOS ============*/
+
+.projects-grid{
+
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(min(100%, 320px), 1fr)
+    );
+
+    gap: 30px;
+    max-width: 1100px;
+    margin: 40px auto 0;
+}
+
+/*================ TARJETA =========*/
+
+.project-card{
+
+    background: #151d32;
+    border: 1px solid rgba(139, 92, 246, 0.15);
+    border-radius: 22px;
+    overflow: hidden;
+    transition: 
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.project-card:hover{
+
+    transform: translateY(-8px);
+    border-color: rgba(139, 92, 246, 0.5);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+/*================ IMAGEN =============*/
+
+.project-image{
+
+    height: 250px;
+    background: linear-gradient(135deg, #211c4d, #111827);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-placeholder{
+
+    text-align: center;
+    color: #8b5cf6;
+}
+
+.image-placeholder span{
+    display: block;
+    font-size: 55px;
+    font-weight: 800;
+    margin-bottom: 8px;
+
+}
+
+.image-placeholder p{
+
+    margin: 0;
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+/*================ CONTENIDO ==============*/
+
+.project-content{
+
+    padding: 30px;
+}
+
+.project-number{
+
+    color: #8b5cf6;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.project-content h2{
+
+    margin: 10px 0 15px;
+    color: #f8fafc;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.project-content p{
+
+    margin-bottom: 25px;
+    color: #94a3b8;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/*================ TECNOLOGIAS ==============*/
+
+.project-technologies{
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 28px;
+}
+
+.project-technologies span{
+
+    padding: 7px 12px;
+    background: rgba(139, 92, 246, 0.12);
+    border: 1px solid rgba(139, 92, 246, 0.2);
+    border-radius: 8px;
+    color: #c4b5fd;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/*================= BOTON ===============*/
+
+.project-button{
+
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    background: #7c3aed;
+    border-radius: 10px;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.project-button:hover{
+
+    background: #8b5cf6;
+    transform: translateX(4px);
+}
+
+.project-button span{
+
+    font-size: 18px;
+}
+
+/*============== RESPONSIVE ============*/
+
+@media (max-width: 768px) {
+
+    .projects-section{
+        padding: 80px 6%;
+    }
+
+    .projects-header h1 {
+        font-size: 38px;
+    }
+
+    .projects-header p{
+        font-size: 15px;
+    }
+
+    .project-image{
+        height: 220px;
+    }
+}

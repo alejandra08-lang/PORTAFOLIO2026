@@ -1,0 +1,36 @@
+.contact-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-page main {
+    flex: 1;
+}
+
+.contact-section {
+    padding: 150px 0 90px;
+}
+
+.contact-section .section-tag {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.contact-section h1 {
+    margin-bottom: 16px;
+    font-size: clamp(2.5rem, 7vw, 4rem);
+}
+
+.contact-section p:last-child {
+    color: var(--gray);
+    line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+    .contact-section {
+        padding: 120px 0 64px;
+    }
+}

@@ -1,0 +1,312 @@
+/*=========== PROYECTO DULCERIA =========*/
+
+.project-detail{
+
+    min-height: calc(100vh - 80px);
+    padding: 100px 10% 80px;
+}
+
+/*============== ENCABEZADO =========*/
+
+.project-detail-tag{
+
+    display: inline-block;
+    color: #8b5cf6;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.project-detail-header h1{
+
+    margin: 0;
+    color: #f8fafc;
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.project-detail-header h1 span{
+
+    color: #8b5cf6;
+}
+
+.project-detail-header p{
+
+    margin-top: 25px;
+    color: #94a3b8;
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 800px;
+}
+
+/*============= BOTONES ============*/
+
+.project-buttons{
+
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    margin-bottom: 48px;
+    flex-wrap: wrap;
+}
+
+.project-btn{
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.project-btn-primary{
+
+    background: #7c3aed;
+    color: #ffffff;
+
+}
+
+.project-btn-primary:hover{
+
+    transform: translateY(-3px);
+    background: #8b5cf6;
+}
+
+.project-btn-secondary{
+
+    border: 1px solid #7c3aed;
+    color: #ffffff;
+}
+
+.project-btn-secondary:hover{
+
+    background: #7c3aed;
+}
+
+.project-btn-github {
+    border: 1px solid rgba(139, 92, 246, 0.45);
+    background: #171f35;
+    color: #ffffff;
+}
+
+.project-btn-github:hover {
+    transform: translateY(-3px);
+    background: #211b4b;
+}
+
+/*=========== IMAGEN / CAPTURA DEL PROYECTO ==========*/
+
+.project-preview{
+
+    width: 100%;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 70px;
+    background: linear-gradient(
+        135deg,
+        #211b4b,
+        #111827
+    );
+
+    border: 1px solid rgba(139, 92, 246, 0.35);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.project-preview-placeholder{
+
+    text-align: center;
+    color: #94a3b8;
+}
+
+.project-preview-placeholder .code-icon{
+    display: block;
+    margin-bottom: 15px;
+    color: #8b5cf6;
+    font-size: 55px;
+    font-weight: 700;
+}
+
+.project-preview-placeholder p{
+
+    margin: 0;
+    font-size: 17px;
+}
+
+/*============ CONTENIDO ==============*/
+
+.project-content{
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+/*================== DESCRIPCION ==============*/
+
+.project-description h2, 
+.project-info h2 {
+
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #f8fafc;
+    font-size: 30px;
+}
+
+.project-description h2 span{
+    color: #8b5cf6;
+}
+
+.project-description p{
+
+    color: #94a3b8;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/*=========== FUNCIONALIDADES ========¨*/
+
+.project-features{
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.feature-card{
+
+    padding: 22px;
+    background: #171f35;
+    border: 1px solid rgba(139, 92, 246, 0.15);
+    border-radius: 12px;
+    transition: 0.3s ease;
+}
+
+.feature-card:hover{
+
+    transform: translateY(-3px);
+    border-color: rgba(139, 92, 246, 0.5);
+}
+
+.feature-card h3{
+
+    margin: 0 0 8px;
+    color: #8b5cf6;
+    font-size: 17px;
+}
+
+.feature-card p{
+
+    margin: 0;
+    color: #94a3b8;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/*============== INFORMACION DEL PROYECTO ============*/
+
+.project-info{
+
+    padding: 30px;
+    background: #171f35;
+    border: 1px solid rgba(139, 92, 246, 0.2);
+    border-radius: 15px;
+}
+
+.project-info-item{
+
+    margin-bottom: 25px;
+}
+
+.project-info-item:last-child{
+
+    margin-bottom: 0;
+}
+
+.project-info-item strong{
+
+    display: block;
+    margin-bottom: 8px;
+    color: #8b5cf6;
+    font-size: 15px;
+}
+
+.project-info-item p{
+
+    margin: 0;
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+/*============ TECNOLOGIAS ============*/
+
+.project-technologies{
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.project-tech{
+    padding: 7px 12px;
+    color: #c4b5fd;
+    background: #211b4b;
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    border-radius: 7px;
+    font-size: 13px;
+}
+
+/*============= RESPONSIVE =============*/
+
+@media (max-width: 900px) {
+
+    .project-detail{
+        padding: 80px 6%;
+    }
+
+    .project-detail-header h1{
+
+        font-size: 45px;
+    }
+
+    .project-content{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .project-detail{
+        padding: 60px 5%;
+    }
+
+    .project-detail-header h1{
+
+        font-size: 36px;
+    }
+
+    .project-detail-header p{
+        font-size: 16px;
+    }
+
+    .project-buttons {
+        margin-bottom: 36px;
+    }
+
+    .project-preview{
+        min-height: 280px;
+    }
+
+    .project-features{
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,230 @@
+/* Shared responsive layout rules */
+
+.technologies h2 {
+    margin-bottom: 24px;
+    font-size: var(--h2);
+}
+
+.technologies {
+    padding: 56px 0 80px;
+}
+
+.technologies h2 span {
+    color: var(--primary-color);
+}
+
+.technology-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.technology-list span {
+    padding: 10px 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    background: var(--surface-color);
+    color: var(--white);
+}
+
+.light-theme {
+    --background-color: #f8fafc;
+    --surface-color: #e2e8f0;
+    --white: #0f172a;
+    --gray: #475569;
+    --border-color: #cbd5e1;
+    --shadow: 0 15px 40px rgba(15, 23, 42, 0.12);
+}
+
+.light-theme .header {
+    background: rgba(248, 250, 252, 0.88);
+    border-bottom-color: rgba(15, 23, 42, 0.1);
+}
+
+.light-theme .projects-header h1,
+.light-theme .project-content h2,
+.light-theme .project-detail-header h1,
+.light-theme .project-description h2,
+.light-theme .project-info h2 {
+    color: #0f172a;
+}
+
+.light-theme .projects-header p,
+.light-theme .project-content p,
+.light-theme .project-detail-header p,
+.light-theme .project-description p,
+.light-theme .project-preview-placeholder,
+.light-theme .project-info-item p,
+.light-theme .image-placeholder p {
+    color: #475569;
+}
+
+.light-theme .project-card,
+.light-theme .feature-card,
+.light-theme .project-info {
+    background: #ffffff;
+}
+
+.light-theme .project-image,
+.light-theme .project-preview {
+    background: linear-gradient(135deg, #f3e8ff, #e2e8f0);
+}
+
+.light-theme .project-btn-secondary {
+    color: #0f172a;
+}
+
+.light-theme .project-btn-github {
+    background: #ffffff;
+    color: #0f172a;
+}
+
+.light-theme .project-btn-github:hover {
+    background: #f3e8ff;
+}
+
+.light-theme .project-tech {
+    color: #5b21b6;
+    background: #f3e8ff;
+}
+
+.light-theme .project-technologies span {
+    color: #5b21b6;
+}
+
+@media (max-width: 850px) {
+    .menu-toggle {
+        display: block;
+        order: 3;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        z-index: 5;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding: 10px 20px;
+        flex-direction: column;
+        gap: 0;
+        border: 1px solid var(--border-color);
+        border-radius: 0 0 14px 14px;
+        background: var(--background-color);
+        box-shadow: var(--shadow);
+    }
+
+    .nav-menu.is-open {
+        display: flex;
+    }
+
+    .nav-link {
+        display: block;
+        padding: 12px 4px;
+    }
+
+    .hero-container,
+    .about-container {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 40px;
+    }
+
+    .hero-content {
+        order: 1;
+    }
+
+    .hero-image {
+        order: 0;
+        min-height: 360px;
+    }
+
+    .hero-image img {
+        width: min(360px, 80%);
+    }
+
+    .about-container {
+        gap: 32px;
+    }
+
+    .about-image img {
+        width: min(380px, 100%);
+    }
+
+    .project-content {
+        gap: 36px;
+    }
+}
+
+@media (max-width: 600px) {
+    :root {
+        --section-padding: 72px;
+        --h2: 2rem;
+    }
+
+    .hero {
+        padding-top: 100px;
+    }
+
+    .about {
+        padding: 56px 0;
+    }
+
+    .technologies {
+        padding: 40px 0 56px;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.3rem, 10vw, 3.2rem);
+        overflow-wrap: anywhere;
+    }
+
+    .hero h2 {
+        font-size: 1.35rem;
+    }
+
+    .hero-image {
+        min-height: 300px;
+    }
+
+    .floating-tech {
+        width: 48px;
+        height: 48px;
+    }
+
+    .tech-php {
+        left: 2%;
+    }
+
+    .tech-js {
+        left: 5%;
+    }
+
+    .tech-code {
+        right: 2%;
+    }
+
+    .tech-html {
+        right: 0;
+    }
+
+    .about-info {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-section {
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+
+    .project-content {
+        padding: 22px;
+    }
+
+    .project-preview {
+        min-height: 250px;
+    }
+
+    .technology-list span {
+        padding: 9px 12px;
+    }
+}

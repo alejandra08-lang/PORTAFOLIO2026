@@ -1,0 +1,108 @@
+/* Reset */
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+
+}
+
+html{
+
+    scroll-behavior: smooth;
+
+}
+
+body{
+    background:var(--background-color);
+    color:var(--white);
+    font-family: var(--text-font);
+    overflow-x: hidden;
+}
+
+/*contenedor*/
+
+.container{
+
+    width:90%;
+    max-width: var(--container-width);
+    margin:auto;
+}
+
+/*Titulos*/
+
+h1,h2,h3{
+
+    font-family:var(--title-font);
+
+}
+
+a{
+
+    text-decoration: none;
+
+}
+
+li{
+    list-style: none;
+}
+
+img{
+
+    width: 100%;
+
+    display: block;
+
+}
+
+section{
+
+    padding:var(--section-padding) 0;
+
+}
+
+/*=========== BOTONES =========*/
+
+.btn-primary,
+.btn-secondary{
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-family:var(--text-font);
+    font-size:1rem;
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: var(--transition);
+    cursor:pointer;
+
+}
+
+.btn-primary{
+
+    background: var(--primary-color);
+    color: var(--white);
+
+}
+
+.btn-primary:hover{
+
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+
+}
+
+.btn-secondary{
+    border:2px solid var(--primary-color);
+    color: var(--white);
+    background: transparent;
+
+}
+
+.btn-secondary:hover{
+    background:var(--primary-color);
+
+}

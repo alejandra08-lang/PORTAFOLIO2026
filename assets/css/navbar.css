@@ -1,0 +1,104 @@
+/*======= HEADER ==========*/
+
+.header{
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    backdrop-filter: blur(12px);
+    background: rgba(15, 23, 42, 0.75);
+    border-bottom: 1px solid rgba(255, 255, 255, .08);
+}
+
+/*=========== NAVBAR =========*/
+
+.navbar{
+
+    position: relative;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--title-font);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.logo-primary{
+
+    color: var(--primary-color);
+
+}
+
+.logo-secondary{
+
+    color: var(--white)
+}
+
+/*=============== MENU ===========*/
+
+.nav-menu{
+
+    display: flex;
+    gap: 35px;
+}
+
+.nav-link{
+
+    color: var(--gray);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-link:hover{
+
+    color: var(--white);
+
+}
+
+/*============= BOTON =========*/
+
+.theme-btn{
+
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background: var(--surface-color);
+    color: var(--white);
+    transition: var(--transition);
+
+}
+
+.theme-btn:hover{
+
+    background: var(--primary-color);
+}
+
+.menu-toggle {
+    display: none;
+    width: 42px;
+    height: 42px;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    background: var(--surface-color);
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    height: 2px;
+    margin: 4px 0;
+    background: var(--white);
+}

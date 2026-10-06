@@ -1,0 +1,99 @@
+/*============= SOBRE MI ==============*/
+
+.about{
+
+    min-height: 0;
+    display: flex;
+    align-items: center;
+    padding: 80px 0;
+
+}
+
+.about-container{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 80px;
+}
+
+/*============== IMAGEN ============*/
+
+.about-image{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image img{
+
+    width: 380px;
+    max-width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: var(--shadow);
+}
+
+/*============== CONTENIDO ==========*/
+
+.about-content{
+
+    max-width: 600px;
+}
+
+.about-label{
+
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.about-content h2{
+
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
+
+.about-content h2 span{
+
+    color: var(--primary-color);
+}
+
+.about-content p{
+
+    color: var(--gray);
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+/*================ INFORMACION ===========*/
+
+.about-info{
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.about-info-item{
+
+    padding: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.about-info-item strong{
+
+    display: block;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.about-info-item span{
+
+    color: var(--gray);
+}
