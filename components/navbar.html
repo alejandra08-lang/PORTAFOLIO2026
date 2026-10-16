@@ -1,47 +1,27 @@
-<header class="header">
+<header class="site-header">
+    <nav class="navbar container" aria-label="Navegación principal">
 
-    <div class="container">
-        <nav class="navbar">
+        <a href="{{home}}#inicio" class="logo" aria-label="Alejandra Rodríguez, ir al inicio">
+            <span class="logo-mark" aria-hidden="true">AR</span>
+            <span class="logo-text">Alejandra Rodríguez</span>
+        </a>
 
-            <!--logo-->
-            <a href="index.html" class="logo">
+        <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="primary-nav">
+            <span class="menu-toggle-bar" aria-hidden="true"></span>
+            <span class="menu-toggle-bar" aria-hidden="true"></span>
+            <span class="menu-toggle-bar" aria-hidden="true"></span>
+        </button>
 
-                <span class="logo-primary">Alejandra</span>
-                <span class="logo-secondary">Rodriguez</span>
-            </a>
-
-            <!--Menu-->
-
-            <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="primary-nav">
-                <span></span><span></span><span></span>
-            </button>
-
-            <ul class="nav-menu" id="primary-nav">
-                <li>
-                    <a href="#inicio" class="nav-link">Inicio</a>
-                </li>
-
-                <li>
-                    <a href="#sobre-mi" class="nav-link">Sobre mi</a>
-                </li>
-
-                <li>
-                    <a href="pages/projects.html" class="nav-link">Proyectos</a>
-                </li>
-
-                <li><a href="#tecnologias" class="nav-link">Tecnologías</a></li>
-                <li><a href="pages/contacto.html" class="nav-link">Contacto</a></li>
-
+        <div class="nav-panel" id="primary-nav">
+            <ul class="nav-menu">
+                <li><a href="{{home}}#proyectos" class="nav-link" data-section="proyectos">Proyectos</a></li>
+                <li><a href="{{home}}#proceso" class="nav-link" data-section="proceso">Cómo trabajo</a></li>
+                <li><a href="{{home}}#formacion" class="nav-link" data-section="formacion">Formación</a></li>
+                <li><a href="{{home}}#contacto" class="nav-link" data-section="contacto">Contacto</a></li>
             </ul>
 
-            <!--Acciones-->
+            <a href="{{home}}#contacto" class="btn btn--primary nav-cta">Contactar</a>
+        </div>
 
-            <div class="nav-actions">
-
-                <button class="theme-btn" type="button" aria-label="Cambiar a tema claro" aria-pressed="false">
-                    🌙
-                </button>
-            </div>
-        </nav>
-    </div>
+    </nav>
 </header>

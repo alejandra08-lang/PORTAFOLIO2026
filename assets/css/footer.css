@@ -1,47 +1,30 @@
+/* =========================================================
+   FOOTER — mínimo: nombre, año, redes y firma.
+   ========================================================= */
+
 .site-footer {
-    padding: 28px 0;
-    border-top: 1px solid var(--border-color);
-    background: var(--background-color);
+    border-top: var(--border);
+    padding-block: var(--space-10);
 }
 
-.footer-content {
+.footer-inner {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
+    flex-direction: column;
+    gap: var(--space-6);
 }
 
-.footer-copyright {
-    margin: 0;
-    color: var(--gray);
-    font-size: 0.9rem;
+.footer-name {
+    color: var(--color-text);
+    font-weight: var(--fw-semibold);
+}
+
+.footer-note {
+    font-family: var(--font-mono);
+    font-size: var(--fs-mono);
+    color: var(--color-text-muted);
 }
 
 .footer-social {
     display: flex;
-    flex-wrap: wrap;
-    gap: 22px;
-}
-
-.footer-social a {
-    color: var(--gray);
-    font-size: 0.9rem;
-    transition: color var(--transition);
-}
-
-.footer-social a:hover,
-.footer-social a:focus-visible {
-    color: var(--primary-color);
-}
-
-@media (max-width: 600px) {
-    .footer-content {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 14px;
-    }
-
-    .footer-social {
-        gap: 16px;
-    }
+    gap: var(--space-2);
 }

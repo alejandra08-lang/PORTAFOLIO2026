@@ -1,312 +1,261 @@
-/*=========== PROYECTO DULCERIA =========*/
+/* =========================================================
+   CASO DE ESTUDIO (pages/proyecto-dulceria.html)
+   Reutiliza hero.css (fondo y título) y projects.css (decisiones).
+   ========================================================= */
 
-.project-detail{
+/* ===== ENCABEZADO ===== */
 
-    min-height: calc(100vh - 80px);
-    padding: 100px 10% 80px;
+.cs-hero {
+    padding-bottom: var(--space-16);
 }
 
-/*============== ENCABEZADO =========*/
-
-.project-detail-tag{
-
-    display: inline-block;
-    color: #8b5cf6;
-    font-size: 16px;
-    font-weight: 600;
-    margin-bottom: 15px;
+.cs-hero-inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: start;
+    gap: var(--space-6);
 }
 
-.project-detail-header h1{
-
-    margin: 0;
-    color: #f8fafc;
-    font-size: 56px;
-    font-weight: 800;
-    line-height: 1.1;
+.cs-back {
+    margin-left: calc(var(--space-2) * -1);
 }
 
-.project-detail-header h1 span{
-
-    color: #8b5cf6;
+.cs-title {
+    max-width: none;
 }
 
-.project-detail-header p{
-
-    margin-top: 25px;
-    color: #94a3b8;
-    font-size: 18px;
-    line-height: 1.8;
-    max-width: 800px;
-}
-
-/*============= BOTONES ============*/
-
-.project-buttons{
-
-    display: flex;
-    gap: 15px;
-    margin-top: 30px;
-    margin-bottom: 48px;
-    flex-wrap: wrap;
-}
-
-.project-btn{
-
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 13px 24px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.3s ease;
-}
-
-.project-btn-primary{
-
-    background: #7c3aed;
-    color: #ffffff;
-
-}
-
-.project-btn-primary:hover{
-
-    transform: translateY(-3px);
-    background: #8b5cf6;
-}
-
-.project-btn-secondary{
-
-    border: 1px solid #7c3aed;
-    color: #ffffff;
-}
-
-.project-btn-secondary:hover{
-
-    background: #7c3aed;
-}
-
-.project-btn-github {
-    border: 1px solid rgba(139, 92, 246, 0.45);
-    background: #171f35;
-    color: #ffffff;
-}
-
-.project-btn-github:hover {
-    transform: translateY(-3px);
-    background: #211b4b;
-}
-
-/*=========== IMAGEN / CAPTURA DEL PROYECTO ==========*/
-
-.project-preview{
-
+.cs-meta {
+    display: grid;
+    gap: var(--space-3);
     width: 100%;
-    min-height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 70px;
-    background: linear-gradient(
-        135deg,
-        #211b4b,
-        #111827
-    );
-
-    border: 1px solid rgba(139, 92, 246, 0.35);
-    border-radius: 20px;
-    overflow: hidden;
+    margin-top: var(--space-2);
 }
 
-.project-preview-placeholder{
-
-    text-align: center;
-    color: #94a3b8;
+.cs-meta-item {
+    padding: var(--space-4);
+    border: var(--border);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+    -webkit-backdrop-filter: var(--blur);
+    backdrop-filter: var(--blur);
 }
 
-.project-preview-placeholder .code-icon{
-    display: block;
-    margin-bottom: 15px;
-    color: #8b5cf6;
-    font-size: 55px;
-    font-weight: 700;
+.cs-meta-item dt {
+    font-family: var(--font-mono);
+    font-size: var(--fs-mono);
+    letter-spacing: var(--tracking-mono);
+    text-transform: uppercase;
+    color: var(--color-accent-text);
 }
 
-.project-preview-placeholder p{
-
-    margin: 0;
-    font-size: 17px;
+.cs-meta-item dd {
+    margin-top: var(--space-1);
+    color: var(--color-text);
+    font-size: var(--fs-small);
+    font-weight: var(--fw-medium);
 }
 
-/*============ CONTENIDO ==============*/
+/* ===== LAYOUT CON ÍNDICE ===== */
 
-.project-content{
-
+.cs-layout {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 60px;
+    gap: var(--space-12);
     align-items: start;
+    padding-bottom: var(--section-padding);
 }
 
-/*================== DESCRIPCION ==============*/
-
-.project-description h2, 
-.project-info h2 {
-
-    margin-top: 0;
-    margin-bottom: 20px;
-    color: #f8fafc;
-    font-size: 30px;
-}
-
-.project-description h2 span{
-    color: #8b5cf6;
-}
-
-.project-description p{
-
-    color: #94a3b8;
-    font-size: 16px;
-    line-height: 1.8;
-    margin-bottom: 20px;
-}
-
-/*=========== FUNCIONALIDADES ========¨*/
-
-.project-features{
-
+.cs-article {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    margin-top: 30px;
+    gap: var(--space-20);
+    min-width: 0;
 }
 
-.feature-card{
-
-    padding: 22px;
-    background: #171f35;
-    border: 1px solid rgba(139, 92, 246, 0.15);
-    border-radius: 12px;
-    transition: 0.3s ease;
+.cs-toc {
+    display: none;
+    position: sticky;
+    top: calc(var(--nav-height) + var(--space-8));
+    padding-left: var(--space-5);
+    border-left: var(--border);
 }
 
-.feature-card:hover{
-
-    transform: translateY(-3px);
-    border-color: rgba(139, 92, 246, 0.5);
+.cs-toc-title {
+    margin-bottom: var(--space-3);
+    font-family: var(--font-mono);
+    font-size: var(--fs-mono);
+    letter-spacing: var(--tracking-mono);
+    text-transform: uppercase;
+    color: var(--color-text-muted);
 }
 
-.feature-card h3{
-
-    margin: 0 0 8px;
-    color: #8b5cf6;
-    font-size: 17px;
+.cs-toc ol {
+    display: grid;
+    gap: var(--space-2);
 }
 
-.feature-card p{
-
-    margin: 0;
-    color: #94a3b8;
-    font-size: 14px;
-    line-height: 1.6;
+.cs-toc a {
+    font-size: var(--fs-small);
+    color: var(--color-text-soft);
+    transition: color var(--transition);
 }
 
-/*============== INFORMACION DEL PROYECTO ============*/
-
-.project-info{
-
-    padding: 30px;
-    background: #171f35;
-    border: 1px solid rgba(139, 92, 246, 0.2);
-    border-radius: 15px;
+.cs-toc a:hover {
+    color: var(--color-accent-text);
 }
 
-.project-info-item{
+/* ===== SECCIONES ===== */
 
-    margin-bottom: 25px;
+.cs-section {
+    display: grid;
+    gap: var(--space-5);
 }
 
-.project-info-item:last-child{
-
-    margin-bottom: 0;
+.cs-section-title {
+    font-size: var(--fs-h2);
 }
 
-.project-info-item strong{
-
-    display: block;
-    margin-bottom: 8px;
-    color: #8b5cf6;
-    font-size: 15px;
+.cs-panel {
+    display: grid;
+    align-content: start;
+    gap: var(--space-3);
+    padding: var(--space-6) var(--space-5);
 }
 
-.project-info-item p{
-
-    margin: 0;
-    color: #cbd5e1;
-    line-height: 1.6;
+.cs-panel p {
+    font-size: var(--fs-small);
+    line-height: 1.7;
+    color: var(--color-text-muted);
 }
 
-/*============ TECNOLOGIAS ============*/
-
-.project-technologies{
-
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
+.cs-panel-title {
+    font-size: var(--fs-body);
 }
 
-.project-tech{
-    padding: 7px 12px;
-    color: #c4b5fd;
-    background: #211b4b;
-    border: 1px solid rgba(139, 92, 246, 0.3);
-    border-radius: 7px;
-    font-size: 13px;
+/* ===== ALCANCE ===== */
+
+.cs-scope,
+.cs-learnings {
+    display: grid;
+    gap: var(--space-4);
 }
 
-/*============= RESPONSIVE =============*/
-
-@media (max-width: 900px) {
-
-    .project-detail{
-        padding: 80px 6%;
-    }
-
-    .project-detail-header h1{
-
-        font-size: 45px;
-    }
-
-    .project-content{
-        grid-template-columns: 1fr;
-    }
+.cs-check-list {
+    display: grid;
+    gap: var(--space-3);
 }
 
-@media (max-width: 600px) {
+.cs-check-list li {
+    position: relative;
+    padding-left: var(--space-6);
+    font-size: var(--fs-small);
+    line-height: 1.65;
+}
 
-    .project-detail{
-        padding: 60px 5%;
-    }
+.cs-check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    font-family: var(--font-mono);
+    color: var(--color-success);
+}
 
-    .project-detail-header h1{
+.cs-check-list--out li::before {
+    content: "–";
+    color: var(--color-text-muted);
+}
 
-        font-size: 36px;
-    }
+/* ===== MODELO DE DATOS ===== */
 
-    .project-detail-header p{
-        font-size: 16px;
-    }
+.cs-entities {
+    display: grid;
+    gap: var(--space-3);
+}
 
-    .project-buttons {
-        margin-bottom: 36px;
-    }
+.cs-entity {
+    overflow: hidden;
+    border: var(--border);
+    border-radius: var(--radius-md);
+    background: var(--color-surface-solid);
+    font-family: var(--font-mono);
+    font-size: var(--fs-mono);
+}
 
-    .project-preview{
-        min-height: 280px;
-    }
+.cs-entity-name {
+    padding: var(--space-3) var(--space-4);
+    border-bottom: var(--border);
+    background: var(--color-accent-soft);
+    color: var(--color-accent-text);
+    font-weight: var(--fw-bold);
+}
 
-    .project-features{
-        grid-template-columns: 1fr;
-    }
+.cs-entity-fields {
+    display: grid;
+    gap: var(--space-1);
+    padding: var(--space-3) var(--space-4);
+    color: var(--color-text-muted);
+}
+
+.cs-entity-fields span {
+    color: var(--color-text);
+}
+
+.cs-note {
+    padding: var(--space-4) var(--space-5);
+    border-left: 2px solid var(--color-accent);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    background: var(--color-surface);
+    font-size: var(--fs-small);
+}
+
+.cs-note code {
+    color: var(--color-accent-text);
+}
+
+.cs-inline-link {
+    display: inline-block;
+    margin-top: var(--space-2);
+    font-family: var(--font-mono);
+    font-size: var(--fs-mono);
+    color: var(--color-accent-text);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* ===== GALERÍA ===== */
+
+.cs-gallery {
+    display: grid;
+    gap: var(--space-6);
+}
+
+.cs-gallery figure {
+    display: grid;
+    gap: var(--space-2);
+}
+
+.cs-gallery img {
+    width: 100%;
+    border: var(--border);
+    border-radius: var(--radius-md);
+    background: var(--color-surface-solid);
+}
+
+.cs-gallery figcaption {
+    font-family: var(--font-mono);
+    font-size: var(--fs-mono);
+    color: var(--color-text-muted);
+}
+
+/* ===== CIERRE ===== */
+
+.cs-cta {
+    display: grid;
+    gap: var(--space-5);
+    padding: var(--space-8) var(--space-6);
+}
+
+.cs-cta-text {
+    color: var(--color-text);
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-semibold);
+    letter-spacing: -0.015em;
 }

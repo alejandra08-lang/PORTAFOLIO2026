@@ -2,182 +2,638 @@
 <html lang="es">
 
 <head>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Alejandra Rodriguez</title>
+    <title>Alejandra Rodríguez · Desarrolladora Web Junior</title>
+    <meta name="description" content="Portafolio de Alejandra Rodríguez, Tecnóloga en Análisis y Desarrollo de Software (SENA) en Bogotá. Desarrollo web con HTML, CSS, JavaScript, PHP y bases de datos relacionales.">
+    <meta name="theme-color" content="#020617">
+    <meta property="og:title" content="Alejandra Rodríguez · Desarrolladora Web Junior">
+    <meta property="og:description" content="Construyo aplicaciones web claras, funcionales y bien documentadas.">
+    <meta property="og:type" content="website">
 
-    <!--google fonts-->
+    <script>document.documentElement.classList.add("js");</script>
+
+    <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 
-    <!--CSS-->
-
+    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/variables.css">
     <link rel="stylesheet" href="assets/css/global.css">
     <link rel="stylesheet" href="assets/css/navbar.css">
     <link rel="stylesheet" href="assets/css/hero.css">
-    <link rel="stylesheet" href="assets/css/about.css">
     <link rel="stylesheet" href="assets/css/projects.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/process.css">
+    <link rel="stylesheet" href="assets/css/education.css">
+    <link rel="stylesheet" href="assets/css/technologies.css">
+    <link rel="stylesheet" href="assets/css/about.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
     <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
-<body>
+
+<body data-root="">
+
+    <a href="#main" class="skip-link">Saltar al contenido</a>
+
     <div id="navbar"></div>
 
-    <main>
+    <main id="main">
 
-        <section id="inicio" class="hero">
-            <div class="container hero-container">
-                <!--==== TEXTO ===== -->
+        <!--================ 1. HERO ================-->
+
+        <section id="inicio" class="hero" aria-labelledby="hero-title">
+            <div class="hero-bg" aria-hidden="true">
+                <div class="hero-grid"></div>
+                <div class="hero-glow"></div>
+            </div>
+
+            <div class="container hero-inner">
 
                 <div class="hero-content">
 
-                    <p class="hero-greeting">
-                        ¡Hola!
+                    <p class="status-badge">
+                        <span class="status-dot" aria-hidden="true"></span>
+                        Disponible · Desarrolladora Web Junior
                     </p>
 
-                    <h1>
-                        Soy <span>Alejandra Rodriguez</span>
+                    <h1 id="hero-title" class="hero-title">
+                        Construyo aplicaciones web claras, funcionales y
+                        <span class="accent">bien documentadas.</span>
                     </h1>
 
-                    <h2>
-                        Desarrolladora de Software Junior
-                    </h2>
-
-                    <p class="hero-description">
-                        Tecnologa en Analisis y Desarrollo de Software del SENA.
-                        Me apasiona desarrollar aplicaciones web modernas, 
-                        intuitivas y funcionales utilizando tecnologias como
-                        HTML, CSS, JavaScript, PHP Y MySQL.
+                    <p class="hero-summary">
+                        Soy Alejandra Rodríguez, Tecnóloga en Análisis y Desarrollo de Software
+                        del SENA, en Bogotá. Trabajo con HTML, CSS, JavaScript y PHP sobre bases
+                        de datos relacionales (MySQL y PostgreSQL), y documento cada decisión
+                        para que el código se entienda después.
                     </p>
 
-                    <div class="hero-buttons">
-
-                        <a href="pages/projects.html" class="btn-primary">
+                    <div class="btn-group hero-actions">
+                        <a href="#proyectos" class="btn btn--primary">
                             Ver proyectos
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
                         </a>
 
-                        <a href="#sobre-mi" class="btn-secondary">
-                            Conocer más
+                        <a href="assets/docs/cv-alejandra-rodriguez.pdf" class="btn btn--secondary" download>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16"/></svg>
+                            Descargar CV
+                        </a>
+
+                        <a href="https://github.com/alejandra08-lang" class="btn btn--icon" target="_blank" rel="noopener noreferrer" aria-label="GitHub (se abre en una pestaña nueva)">
+                            <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/alejandra-rodr%C3%ADguez-guti%C3%A9rrez-524193262" class="btn btn--icon" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (se abre en una pestaña nueva)">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
                         </a>
                     </div>
 
                 </div>
 
-                <!-- IMAGEN -->
+                <!-- Tarjeta tipo documento técnico: decisión real del proyecto Dulcería
+                     (ver PROYECTO_V4/js/Registro.js en el repositorio crazy-kids) -->
 
-                <div class="hero-image">
+                <article class="doc-card card" aria-label="Ejemplo de documentación técnica: decisión 01 del proyecto Dulcería">
 
-                    <div class="hero-glow"></div>
+                    <header class="doc-card-bar">
+                        <span class="doc-card-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                        <span class="doc-card-path">crazy-kid/docs/decisiones/01-validacion-registro.md</span>
+                    </header>
 
-                    <div class="floating-tech tech-php">
-                        PHP
+                    <div class="doc-card-body">
+                        <div class="doc-card-head">
+                            <h2 class="doc-card-title">Validar el registro antes de enviarlo</h2>
+                            <span class="doc-card-status">Implementado</span>
+                        </div>
+
+                        <dl class="doc-card-blocks">
+                            <div class="doc-block">
+                                <dt>Contexto</dt>
+                                <dd>
+                                    El registro de la tienda pide cuatro campos obligatorios
+                                    (usuario, correo, contraseña y confirmación) y el proyecto
+                                    no tenía un servidor que revisara los datos.
+                                </dd>
+                            </div>
+                            <div class="doc-block">
+                                <dt>Decisión</dt>
+                                <dd>
+                                    Validar en el navegador con JavaScript: el botón
+                                    <code>Registrarse</code> inicia deshabilitado y solo se activa
+                                    cuando los cuatro campos tienen contenido; si falta alguno,
+                                    aparece un aviso.
+                                </dd>
+                            </div>
+                            <div class="doc-block">
+                                <dt>Resultado</dt>
+                                <dd>
+                                    La respuesta llega mientras la persona escribe, sin recargar.
+                                    Pendiente: validar el formato del correo y que las contraseñas coincidan.
+                                </dd>
+                            </div>
+                        </dl>
                     </div>
 
-                    <div class="floating-tech tech-js">
-                        JS
-                    </div>
+                    <footer class="doc-card-foot">
+                        <a href="https://github.com/alejandra08-lang/crazy-kids/blob/main/PROYECTO_V4/js/Registro.js" target="_blank" rel="noopener noreferrer">
+                            js/Registro.js
+                            <span class="sr-only">(ver el código en GitHub, se abre en una pestaña nueva)</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+                        </a>
+                    </footer>
 
-                    <div class="floating-tech tech-html">
-                        &lt;/&gt;
-                    </div>
+                </article>
 
-                    <div class="floating-tech tech-code">
-                        {}
-                    </div>
-
-                    <img 
-                    src="assets/img/profile/profile.png/ChatGPT Image 27 jul 2026, 09_53_08 p.m.png" alt="Alejandra Rodriguez">
-                </div>
             </div>
         </section>
 
-        <!--============== SOBRE MI ==============-->
+        <!--================ 2. PROYECTOS ================-->
 
-        <section id="sobre-mi" class="about">
+        <section id="proyectos" class="section projects" aria-labelledby="proyectos-title">
+            <div class="container">
 
-            <div class="container about-container">
+                <header class="section-header" data-reveal>
+                    <p class="eyebrow">Proyectos</p>
+                    <h2 id="proyectos-title" class="section-title">
+                        Casos de estudio: el problema, mis decisiones y
+                        <span class="accent">por qué las tomé.</span>
+                    </h2>
+                </header>
 
-                <!-- FOTO -->
+                <!-- PROYECTO DESTACADO: DULCERÍA -->
 
-                <div class="about-image">
+                <article class="case-card card" aria-labelledby="dulceria-title" data-reveal>
 
-                    <img
-                    src="assets/img/about/Alejandra.jpeg" alt="Alejandra Rodriguez">
-                </div>
+                    <header class="case-header">
+                        <p class="case-meta">
+                            <span>01</span>
+                            <span>Proyecto formativo · SENA ADSO</span>
+                            <span>2025</span>
+                        </p>
+                        <h3 id="dulceria-title" class="case-title">Dulcería Crazy Kid</h3>
+                        <p class="case-tagline">
+                            Tienda en línea de dulces colombianos: catálogo por categorías,
+                            ofertas del día, carrito y flujo de pago.
+                        </p>
+                    </header>
 
-                <!-- INFORMACION -->
+                    <div class="case-body">
 
-                <div class="about-content">
+                        <div class="case-story">
+                            <div class="case-block">
+                                <h4 class="case-label">El problema</h4>
+                                <p>
+                                    Una distribuidora de dulces necesitaba que sus clientes pudieran
+                                    explorar el catálogo por categoría, ver las promociones y armar un
+                                    pedido sin tener que llamar o ir al punto de venta.
+                                </p>
+                            </div>
 
-                    <p class="about-label">
-                        Sobre mi 
+                            <div class="case-block">
+                                <h4 class="case-label">Mi rol</h4>
+                                <p>
+                                    Desarrollo end-to-end: me encargué de todo el proyecto,
+                                    desde el diseño de las 14 pantallas hasta la maquetación
+                                    con Bootstrap, los estilos y la lógica en JavaScript.
+                                </p>
+                            </div>
+
+                            <div class="case-block">
+                                <h4 class="case-label">Stack</h4>
+                                <ul class="chip-list" aria-label="Tecnologías de Dulcería">
+                                    <li class="chip">HTML5</li>
+                                    <li class="chip">CSS3</li>
+                                    <li class="chip">Bootstrap 5</li>
+                                    <li class="chip">JavaScript</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="case-decisions">
+                            <h4 class="case-label">Decisiones clave</h4>
+                            <!-- [COMPLETAR: confirma o ajusta cada "por qué"; se dedujeron del código del repositorio] -->
+                            <ol class="decision-list">
+                                <li class="decision">
+                                    <h5 class="decision-title">Bootstrap 5 como base de la interfaz</h5>
+                                    <p class="decision-why">
+                                        <span class="decision-why-label">Por qué</span>
+                                        La grilla responsive y componentes ya probados (carrusel,
+                                        tarjetas, formularios) permitieron construir 14 pantallas con
+                                        un estilo coherente.
+                                    </p>
+                                </li>
+                                <li class="decision">
+                                    <h5 class="decision-title">Una hoja de estilos por pantalla</h5>
+                                    <p class="decision-why">
+                                        <span class="decision-why-label">Por qué</span>
+                                        Cada vista es independiente: cambiar una pantalla no afecta
+                                        a las demás. El costo: el encabezado se repite en cada página.
+                                    </p>
+                                </li>
+                                <li class="decision">
+                                    <h5 class="decision-title">Validación del registro en el cliente</h5>
+                                    <p class="decision-why">
+                                        <span class="decision-why-label">Por qué</span>
+                                        Sin servidor de por medio, era la forma de avisar de inmediato
+                                        qué faltaba antes de continuar.
+                                    </p>
+                                </li>
+                            </ol>
+                        </div>
+
+                    </div>
+
+                    <ul class="case-gallery" aria-label="Capturas de Dulcería">
+                        <li>
+                            <figure>
+                                <img src="assets/img/projects/dulceria/inicio.jpg" width="1280" height="800" loading="lazy" alt="Página de inicio de Crazy Kid: encabezado rosado con el logo, menú y buscador, carrusel de productos y categorías de confitería.">
+                                <figcaption>Inicio con carrusel</figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure>
+                                <img src="assets/img/projects/dulceria/ofertas.jpg" width="1280" height="800" loading="lazy" alt="Página de ofertas del día con tarjetas de productos que muestran el precio anterior tachado y el precio de promoción.">
+                                <figcaption>Ofertas del día</figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure>
+                                <img src="assets/img/projects/dulceria/pasarela.jpg" width="1280" height="800" loading="lazy" alt="Resumen del pago con dos productos, total a pagar y opciones de tarjeta, PSE o efectivo.">
+                                <figcaption>Pasarela de pago</figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+
+                    <footer class="btn-group case-actions">
+                        <a href="pages/proyecto-dulceria.html" class="btn btn--primary">
+                            Ver caso completo
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                        </a>
+                        <a href="https://github.com/alejandra08-lang/crazy-kids" class="btn btn--secondary" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg>
+                            Ver código
+                            <span class="sr-only">(se abre en una pestaña nueva)</span>
+                        </a>                    </footer>
+
+                </article>
+
+                <!-- OTROS PROYECTOS -->
+
+                <h3 class="subsection-title" data-reveal>Otros proyectos</h3>
+
+                <ul class="mini-grid">
+
+                    <li class="mini-card card" data-reveal>
+                        <p class="mini-meta">
+                            <span>02</span>
+                            <span class="mini-status">En desarrollo</span>
+                        </p>
+                        <h4 class="mini-title">NetAdmin</h4>
+                        <p class="mini-tagline">API REST para el inventario de infraestructura de red.</p>
+                        <p class="mini-desc">
+                            Proyecto de automatización para GROUP COS durante la etapa productiva.
+                            Modelo de 19 tablas en PostgreSQL (sedes, equipos, proveedores,
+                            mantenimientos e historial) y endpoints CRUD organizados en
+                            rutas → controladores → modelos.
+                        </p>
+                        <p class="mini-decision">
+                            <span class="decision-why-label">Decisión</span>
+                            Consultas parametrizadas y errores de PostgreSQL traducidos a respuestas
+                            HTTP claras: 409 si el registro ya existe, 400 si tiene datos asociados.
+                        </p>
+                        <ul class="chip-list" aria-label="Tecnologías de NetAdmin">
+                            <li class="chip">Node.js</li>
+                            <li class="chip">Express</li>
+                            <li class="chip">PostgreSQL</li>
+                            <li class="chip">SQL</li>
+                        </ul>
+                        <a href="https://github.com/alejandra08-lang/netadmin" class="btn btn--ghost mini-link" target="_blank" rel="noopener noreferrer">
+                            Ver código <span class="sr-only">de NetAdmin (se abre en una pestaña nueva)</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                        </a>
+                    </li>
+
+                    <li class="mini-card card" data-reveal>
+                        <p class="mini-meta">
+                            <span>03</span>
+                            <span class="mini-status">Publicado</span>
+                        </p>
+                        <h4 class="mini-title">Este portafolio</h4>
+                        <p class="mini-tagline">HTML, CSS y JavaScript, sin frameworks ni build.</p>
+                        <p class="mini-desc">
+                            Navbar y footer como componentes que se cargan con <code>fetch</code>,
+                            un archivo CSS por sección y todos los colores, tipografías y espacios
+                            definidos como variables en un solo archivo.
+                        </p>
+                        <p class="mini-decision">
+                            <span class="decision-why-label">Decisión</span>
+                            Accesibilidad desde el inicio: contraste AA, foco visible, navegación
+                            con teclado y animaciones que respetan <code>prefers-reduced-motion</code>.
+                        </p>
+                        <ul class="chip-list" aria-label="Tecnologías del portafolio">
+                            <li class="chip">HTML5</li>
+                            <li class="chip">CSS3</li>
+                            <li class="chip">JavaScript</li>
+                        </ul>
+                        <a href="https://github.com/alejandra08-lang/PORTAFOLIO2026" class="btn btn--ghost mini-link" target="_blank" rel="noopener noreferrer">
+                            Ver código <span class="sr-only">del portafolio (se abre en una pestaña nueva)</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </section>
+
+        <!--================ 3. CÓMO TRABAJO ================-->
+
+        <section id="proceso" class="section process" aria-labelledby="proceso-title">
+            <div class="container">
+
+                <header class="section-header" data-reveal>
+                    <p class="eyebrow">Cómo trabajo</p>
+                    <h2 id="proceso-title" class="section-title">
+                        Cada etapa deja algo que el equipo
+                        <span class="accent">puede revisar.</span>
+                    </h2>
+                    <p class="section-lead">
+                        No empiezo por el código. Primero entiendo qué se necesita y cómo se
+                        guardan los datos; así la interfaz y el desarrollo tienen una base clara.
                     </p>
+                </header>
 
-                    <h2>
-                        Conoce un poco <span>sobre mi</span>
+                <ol class="process-list">
+                    <li class="process-step card" data-reveal>
+                        <span class="process-number" aria-hidden="true">01</span>
+                        <h3>Entender el requerimiento</h3>
+                        <p>Pregunto quién usa el sistema, qué problema resuelve y qué información maneja.</p>
+                        <p class="process-output"><span class="sr-only">Entregable: </span>Historias de usuario · Casos de uso</p>
+                    </li>
+                    <li class="process-step card" data-reveal>
+                        <span class="process-number" aria-hidden="true">02</span>
+                        <h3>Modelar los datos</h3>
+                        <p>Defino entidades, relaciones y restricciones antes de crear la primera tabla.</p>
+                        <p class="process-output"><span class="sr-only">Entregable: </span>Diagrama ER · Script SQL</p>
+                    </li>
+                    <li class="process-step card" data-reveal>
+                        <span class="process-number" aria-hidden="true">03</span>
+                        <h3>Diseñar la interfaz</h3>
+                        <p>Organizo pantallas y flujos pensando en quien las va a usar, también desde el celular.</p>
+                        <p class="process-output"><span class="sr-only">Entregable: </span>Wireframes · Guía de estilos</p>
+                    </li>
+                    <li class="process-step card" data-reveal>
+                        <span class="process-number" aria-hidden="true">04</span>
+                        <h3>Desarrollar</h3>
+                        <p>Construyo por partes pequeñas y guardo cada avance en Git con mensajes claros.</p>
+                        <p class="process-output"><span class="sr-only">Entregable: </span>Commits en Git · Endpoints CRUD</p>
+                    </li>
+                    <li class="process-step card" data-reveal>
+                        <span class="process-number" aria-hidden="true">05</span>
+                        <h3>Probar y documentar</h3>
+                        <p>Pruebo los casos normales y los de error, y escribo cómo instalar y usar lo que hice.</p>
+                        <p class="process-output"><span class="sr-only">Entregable: </span>Pruebas en Postman · README</p>
+                    </li>
+                </ol>
+
+            </div>
+        </section>
+
+        <!--================ 4. FORMACIÓN Y EXPERIENCIA ================-->
+
+        <section id="formacion" class="section education" aria-labelledby="formacion-title">
+            <div class="container">
+
+                <header class="section-header" data-reveal>
+                    <p class="eyebrow">Formación y experiencia</p>
+                    <h2 id="formacion-title" class="section-title">
+                        De la formación en el SENA a
+                        <span class="accent">un proyecto real.</span>
+                    </h2>
+                </header>
+
+                <ol class="timeline">
+
+                    <li class="timeline-item" data-reveal>
+                        <p class="timeline-period">Oct. 2025 – Abr. 2026</p>
+                        <h3 class="timeline-title">Desarrollo de Software </h3>
+                        <p class="timeline-place">GROUP COS – Montechelo · Bogotá</p>
+                        <ul class="timeline-list">
+                            <li>Funcionalidades frontend y backend con JavaScript, PHP, Node.js, HTML y CSS en una aplicación web de automatización de procesos.</li>
+                            <li>Diseño y consumo de APIs REST con operaciones CRUD sobre PostgreSQL, probadas con Postman.</li>
+                            <li>Control de versiones con Git y GitHub; interfaces con Bootstrap y Tailwind CSS.</li>
+                        </ul>
+                    </li>
+
+
+                    <li class="timeline-item" data-reveal>
+                        <p class="timeline-period">Abr. 2023 – Ago. 2024</p>
+                        <h3 class="timeline-title">Experiencia previa: administración y servicio al cliente</h3>
+                        <p class="timeline-place">Setenta Cuarenta · Centro Especializado Casa Whirlpool · Bogotá</p>
+                        <ul class="timeline-list">
+                            <li>Registro y actualización de inventario en el ERP Loggro Pymes y en el catálogo web.</li>
+                            <li>Seguimiento de solicitudes de clientes en un CRM y agendamiento de citas técnicas.</li>
+                        </ul>
+                    </li>
+
+                </ol>
+
+            </div>
+        </section>
+
+        <!--================ 5. STACK ================-->
+
+        <section id="stack" class="section stack" aria-labelledby="stack-title">
+            <div class="container">
+
+                <header class="section-header" data-reveal>
+                    <p class="eyebrow">Stack</p>
+                    <h2 id="stack-title" class="section-title">
+                        Herramientas con las que
+                        <span class="accent">ya he construido.</span>
+                    </h2>
+                </header>
+
+                <ul class="stack-grid">
+                    <li class="stack-card card" data-reveal>
+                        <h3>Frontend</h3>
+                        <p class="stack-note">Interfaces responsive y accesibles.</p>
+                        <ul class="chip-list">
+                            <li class="chip chip--accent">HTML5</li>
+                            <li class="chip chip--accent">CSS3</li>
+                            <li class="chip chip--accent">JavaScript</li>
+                            <li class="chip">Bootstrap</li>
+                            <li class="chip">Tailwind CSS</li>
+                            <li class="chip">React</li>
+                        </ul>
+                    </li>
+                    <li class="stack-card card" data-reveal>
+                        <h3>Backend</h3>
+                        <p class="stack-note">APIs REST y operaciones CRUD.</p>
+                        <ul class="chip-list">
+                            <li class="chip chip--accent">PHP</li>
+                            <li class="chip chip--accent">Node.js</li>
+                            <li class="chip">Express</li>
+                            <li class="chip">C#</li>
+                            <li class="chip">ASP.NET</li>
+                        </ul>
+                    </li>
+                    <li class="stack-card card" data-reveal>
+                        <h3>Bases de datos</h3>
+                        <p class="stack-note">Modelos relacionales con restricciones.</p>
+                        <ul class="chip-list">
+                            <li class="chip chip--accent">MySQL</li>
+                            <li class="chip chip--accent">PostgreSQL</li>
+                            <li class="chip">SQL</li>
+                            <li class="chip">Modelado ER</li>
+                        </ul>
+                    </li>
+                    <li class="stack-card card" data-reveal>
+                        <h3>Herramientas</h3>
+                        <p class="stack-note">Versionado, pruebas y entorno.</p>
+                        <ul class="chip-list">
+                            <li class="chip chip--accent">Git</li>
+                            <li class="chip chip--accent">GitHub</li>
+                            <li class="chip">Postman</li>
+                            <li class="chip">VS Code</li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+        </section>
+
+        <!--================ 6. SOBRE MÍ ================-->
+
+        <section id="sobre-mi" class="section about" aria-labelledby="sobre-mi-title">
+            <div class="container about-inner">
+
+                <figure class="about-media" data-reveal>
+                    <img src="assets/img/profile/alejandra-ilustracion.jpg" width="720" height="1080" loading="lazy" alt="Ilustración de Alejandra Rodríguez sonriendo frente a un portátil con el símbolo de código en la tapa.">
+                </figure>
+
+                <div class="about-content" data-reveal>
+                    <p class="eyebrow">Sobre mí</p>
+                    <h2 id="sobre-mi-title" class="section-title">
+                        Datos ordenados, código claro y
+                        <span class="accent">ganas de aprender.</span>
                     </h2>
 
+                    <!-- [COMPLETAR: revisa que estos párrafos suenen a ti] -->
                     <p>
-                        Soy Tecnologa en Analisis y Desarrollo de Software
-                        del SENA, apasionada por la tecnologia y el Desarrollo
-                        de soluciones digitales.
+                        Antes de programar trabajé en áreas administrativas y de servicio al cliente:
+                        inventarios en un ERP, digitación de soportes y seguimiento de solicitudes en
+                        un CRM. Esa experiencia me dejó el hábito de cuidar que la información sea
+                        exacta y de pensar en la persona que usa el sistema.
+                    </p>
+                    <p>
+                        En mi etapa productiva en GROUP COS participé en una aplicación web de
+                        automatización con Node.js y PostgreSQL. Hoy busco mi primer rol como
+                        desarrolladora web junior en un equipo donde pueda aportar desde el inicio
+                        y seguir creciendo con revisión de código y buenas prácticas.
                     </p>
 
-                    <p>
-                        Me gusta crear aplicaciones web modernas, funcionales 
-                        e intuitivas. Disfruto aprender nuevas tecnologias,
-                        enfrentar nuevos retos y continuar fortaleciendo mis 
-                        conocimientos como desarrolladora.
-                    </p>
-
-                    <!-- INFORMACION PERSONAL/PROFESIONAL -->
-
-                    <div class="about-info">
-
-                        <div class="about-info-item">
-                            <strong>Formacion</strong>
-                            <span>ADSO - SENA</span>
+                    <dl class="about-facts">
+                        <div class="about-fact">
+                            <dt>Formación</dt>
+                            <dd>Tecnóloga ADSO · SENA</dd>
                         </div>
-
-                        <div class="about-info-item">
-                            <strong>Perfil</strong>
-                            <span>Desarrolladora Junior</span>
+                        <div class="about-fact">
+                            <dt>Enfoque</dt>
+                            <dd>Desarrollo web y bases de datos</dd>
                         </div>
-
-                        <div class="about-info-item">
-                            <strong>Enfoque</strong>
-                            <span>Desarrollo Web</span>
+                        <div class="about-fact">
+                            <dt>Ubicación</dt>
+                            <dd>Bogotá, Colombia</dd>
                         </div>
-
-                        <div class="about-info-item">
-                            <strong>Actualmente</strong>
-                            <span>Aprendiendo y creciendo</span>
+                        <div class="about-fact">
+                            <dt>Disponibilidad</dt>
+                            <dd>Inmediata</dd>
                         </div>
-                    </div>
+                    </dl>
                 </div>
+
             </div>
         </section>
 
-        <section id="tecnologias" class="technologies">
+        <!--================ 7. CONTACTO ================-->
+
+        <section id="contacto" class="section contact" aria-labelledby="contacto-title">
+            <div class="contact-glow" aria-hidden="true"></div>
             <div class="container">
-                <p class="about-label">Tecnologías</p>
-                <h2>Tecnologías que <span>utilizo</span></h2>
-                <div class="technology-list" aria-label="Tecnologías">
-                    <span>HTML</span><span>CSS</span><span>JavaScript</span>
-                    <span>PHP</span><span>MySQL</span>
-                </div>
+
+                <header class="section-header contact-header" data-reveal>
+                    <p class="eyebrow">Contacto</p>
+                    <h2 id="contacto-title" class="section-title contact-title">
+                        ¿Buscas una desarrolladora junior con ganas de aportar
+                        <span class="accent">desde el primer día?</span>
+                    </h2>
+                    <p class="section-lead">
+                        Escríbeme por el medio que prefieras.
+                        <!-- [COMPLETAR: confirma el tiempo de respuesta] -->
+                        Respondo en menos de 24 horas.
+                    </p>
+                </header>
+
+                <ul class="contact-grid">
+                    <li data-reveal>
+                        <a href="mailto:rodriguezaleja304@gmail.com" class="contact-card card">
+                            <span class="contact-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+                            </span>
+                            <span class="contact-label">Correo</span>
+                            <span class="contact-value">rodriguezaleja304@gmail.com</span>
+                        </a>
+                    </li>
+                    <li data-reveal>
+                        <a href="https://wa.me/573018198341" class="contact-card card" target="_blank" rel="noopener noreferrer">
+                            <span class="contact-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                            </span>
+                            <span class="contact-label">WhatsApp</span>
+                            <span class="contact-value">+57 301 819 8341</span>
+                            <span class="sr-only">(se abre en una pestaña nueva)</span>
+                        </a>
+                    </li>
+                    <li data-reveal>
+                        <a href="https://www.linkedin.com/in/alejandra-rodr%C3%ADguez-guti%C3%A9rrez-524193262" class="contact-card card" target="_blank" rel="noopener noreferrer">
+                            <span class="contact-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+                            </span>
+                            <span class="contact-label">LinkedIn</span>
+                            <span class="contact-value">Alejandra Rodríguez Gutiérrez</span>
+                            <span class="sr-only">(se abre en una pestaña nueva)</span>
+                        </a>
+                    </li>
+                    <li data-reveal>
+                        <a href="https://www.google.com/maps/search/?api=1&amp;query=Bogot%C3%A1%2C%20Colombia" class="contact-card card" target="_blank" rel="noopener noreferrer">
+                            <span class="contact-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                            </span>
+                            <span class="contact-label">Ubicación</span>
+                            <span class="contact-value">Bogotá, Colombia</span>
+                            <span class="sr-only">(abre Google Maps en una pestaña nueva)</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <p class="contact-phone" data-reveal>
+                    ¿Prefieres llamar?
+                    <a href="tel:+573018198341">+57 301 819 8341</a>
+                </p>
+
             </div>
         </section>
-
 
     </main>
 
     <div id="site-footer"></div>
 
     <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/animations.js"></script>
 </body>
+
 </html>

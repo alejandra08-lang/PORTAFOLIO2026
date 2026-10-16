@@ -1,104 +1,136 @@
-/*======= HEADER ==========*/
+/* =========================================================
+   NAVBAR — fijo con fondo blur. Base: móvil con menú
+   desplegable; en ≥ 900px el menú pasa a línea (responsive.css).
+   ========================================================= */
 
-.header{
-
+.site-header {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    backdrop-filter: blur(12px);
-    background: rgba(15, 23, 42, 0.75);
-    border-bottom: 1px solid rgba(255, 255, 255, .08);
+    inset: 0 0 auto;
+    z-index: var(--z-nav);
+    border-bottom: 1px solid transparent;
+    background: var(--color-overlay);
+    -webkit-backdrop-filter: var(--blur-nav);
+    backdrop-filter: var(--blur-nav);
+    transition: border-color var(--transition);
 }
 
-/*=========== NAVBAR =========*/
+.site-header.is-scrolled {
+    border-bottom-color: var(--color-border);
+}
 
-.navbar{
-
-    position: relative;
-    height: 80px;
+.navbar {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+    height: var(--nav-height);
 }
 
-.logo{
+/* ===== LOGO ===== */
 
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-family: var(--title-font);
-  font-size: 1.5rem;
-  font-weight: 700;
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-3);
+    color: var(--color-text);
+    font-weight: var(--fw-semibold);
+    letter-spacing: -0.01em;
 }
 
-.logo-primary{
-
-    color: var(--primary-color);
-
+.logo-mark {
+    display: grid;
+    place-items: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border: 1px solid var(--color-accent-border);
+    border-radius: var(--radius-sm);
+    background: var(--color-accent-soft);
+    color: var(--color-accent-text);
+    font-family: var(--font-mono);
+    font-size: var(--fs-mono);
+    font-weight: var(--fw-bold);
+    letter-spacing: 0.04em;
 }
 
-.logo-secondary{
-
-    color: var(--white)
-}
-
-/*=============== MENU ===========*/
-
-.nav-menu{
-
-    display: flex;
-    gap: 35px;
-}
-
-.nav-link{
-
-    color: var(--gray);
-    font-weight: 500;
-    transition: var(--transition);
-}
-
-.nav-link:hover{
-
-    color: var(--white);
-
-}
-
-/*============= BOTON =========*/
-
-.theme-btn{
-
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    border: none;
-    cursor: pointer;
-    background: var(--surface-color);
-    color: var(--white);
-    transition: var(--transition);
-
-}
-
-.theme-btn:hover{
-
-    background: var(--primary-color);
-}
+/* ===== BOTÓN HAMBURGUESA ===== */
 
 .menu-toggle {
-    display: none;
-    width: 42px;
-    height: 42px;
-    padding: 10px;
-    border: 1px solid var(--border-color);
-    border-radius: 10px;
-    background: var(--surface-color);
-    cursor: pointer;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 2.75rem;
+    height: 2.75rem;
+    padding: 0 var(--space-3);
+    border: var(--border);
+    border-radius: var(--radius-md);
 }
 
-.menu-toggle span {
+.menu-toggle-bar {
     display: block;
     height: 2px;
-    margin: 4px 0;
-    background: var(--white);
+    border-radius: var(--radius-pill);
+    background: var(--color-text);
+    transition: transform var(--transition), opacity var(--transition);
+}
+
+.menu-toggle[aria-expanded="true"] .menu-toggle-bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle[aria-expanded="true"] .menu-toggle-bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle[aria-expanded="true"] .menu-toggle-bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ===== PANEL (móvil: desplegable bajo la barra) ===== */
+
+.nav-panel {
+    position: absolute;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    gap: var(--space-4);
+    padding: var(--space-4) var(--gutter) var(--space-6);
+    border-bottom: var(--border);
+    background: var(--color-bg);
+}
+
+.nav-panel.is-open {
+    display: flex;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-link {
+    display: block;
+    padding: var(--space-3) 0;
+    color: var(--color-text-soft);
+    font-size: var(--fs-small);
+    font-weight: var(--fw-medium);
+    transition: color var(--transition);
+}
+
+.nav-link:hover,
+.nav-link[aria-current="true"] {
+    color: var(--color-text);
+}
+
+.nav-link[aria-current="true"] {
+    text-decoration: underline;
+    text-decoration-color: var(--color-accent-text);
+    text-underline-offset: 6px;
+    text-decoration-thickness: 2px;
+}
+
+.nav-cta {
+    align-self: stretch;
 }

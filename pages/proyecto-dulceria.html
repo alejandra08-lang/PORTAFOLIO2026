@@ -1,321 +1,390 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dulceria | Alejandra Rodriguez</title>
 
+    <title>Dulcería Crazy Kid · Caso de estudio · Alejandra Rodríguez</title>
+    <meta name="description" content="Caso de estudio de Dulcería Crazy Kid: tienda en línea de dulces desarrollada en el SENA. Problema, alcance, modelo de datos, decisiones técnicas, capturas y aprendizajes.">
+    <meta name="theme-color" content="#020617">
+
+    <script>document.documentElement.classList.add("js");</script>
+
+    <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 
-    <!-- CSS PRINCIPAL -->
-
+    <!-- CSS -->
     <link rel="stylesheet" href="../assets/css/variables.css">
     <link rel="stylesheet" href="../assets/css/global.css">
     <link rel="stylesheet" href="../assets/css/navbar.css">
-    <!-- CSS DEL PROYECTO-->
-
+    <link rel="stylesheet" href="../assets/css/hero.css">
+    <link rel="stylesheet" href="../assets/css/projects.css">
     <link rel="stylesheet" href="../assets/css/proyecto-dulceria.css">
-    <link rel="stylesheet" href="../assets/css/responsive.css">
     <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
 </head>
-<body>
 
-    <!--============ NAVBAR ==================-->
+<body data-root="../">
 
-    <header id="navbar"></header>
+    <a href="#main" class="skip-link">Saltar al contenido</a>
 
-    <!--================ PROYECTO ==============-->
+    <div id="navbar"></div>
 
-    <main>
+    <main id="main">
 
-        <section class="project-detail">
+        <!--================ ENCABEZADO ================-->
 
-            <!-- ENCABEZADO-->
+        <header class="cs-hero hero" aria-labelledby="cs-title">
+            <div class="hero-bg" aria-hidden="true">
+                <div class="hero-grid"></div>
+                <div class="hero-glow"></div>
+            </div>
 
-            <div class="project-detail-header">
+            <div class="container cs-hero-inner">
 
-                <span class="project-detail-tag">
-                    PROYECTO 01
-                </span>
+                <a href="../index.html#proyectos" class="btn btn--ghost cs-back">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 19l-7-7 7-7"/></svg>
+                    Volver a proyectos
+                </a>
 
-                <h1>
-                    Dulceria 
-                    <span>🍬</span>
+                <p class="eyebrow">Caso de estudio · 01</p>
+
+                <h1 id="cs-title" class="hero-title cs-title">
+                    Dulcería <span class="accent">Crazy Kid</span>
                 </h1>
 
-                <p>
-                    E-commerce desarrollado como proyecto final 
-                    durante mi formacion en Analisis y Desarrollo
-                    de Software del SENA. 
-
+                <p class="hero-summary">
+                    Tienda en línea de dulces colombianos que desarrollé de principio a fin como
+                    proyecto formativo del SENA: catálogo por categorías, ofertas del día, carrito y
+                    flujo de pago, con registro e inicio de sesión.
                 </p>
 
-                <div class="project-buttons">
+                <dl class="cs-meta">
+                    <div class="cs-meta-item">
+                        <dt>Tipo</dt>
+                        <dd>Proyecto formativo · SENA ADSO</dd>
+                    </div>
+                    <div class="cs-meta-item">
+                        <dt>Mi rol</dt>
+                        <dd>Desarrollo end-to-end</dd>
+                    </div>
+                    <div class="cs-meta-item">
+                        <dt>Año</dt>
+                        <dd>2025</dd>
+                    </div>
+                    <div class="cs-meta-item">
+                        <dt>Stack</dt>
+                        <dd>HTML5 · CSS3 · Bootstrap 5 · JavaScript</dd>
+                    </div>
+                </dl>
 
-                    <a href="#descripcion"
-                    class="project-btn project-btn-primary">
-
-                    Conocer el proyecto ↓
-                
-                </a>
-
-                <a href="projects.html"
-                class="project-btn project-btn-secondary">
-
-                ← Volver a proyectos 
-            
-            
-            </a>
-
-                <!-- Reemplaza TU_USUARIO/NOMBRE_REPOSITORIO por la URL real del repositorio -->
-                <a href="https://github.com/TU_USUARIO/NOMBRE_REPOSITORIO"
-                   class="project-btn project-btn-github"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    Ver repositorio en GitHub
-                </a>
-                </div>
-            </div>
-
-            <!--============== PREVISUALIZACION ==============-->
-
-            <div class="project-preview">
-
-                <div class="project-preview-placeholder">
-
-                    <span class="code-icon">
-                         &lt;/&gt;
-                    </span>
-
-                    <p>
-                        Proximamente podras ver capturas
-                        de este proyecto.
-                    </p>
-
-                </div>
+                <div class="btn-group">
+                    <a href="https://github.com/alejandra08-lang/crazy-kids" class="btn btn--primary" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg>
+                        Ver código
+                        <span class="sr-only">(se abre en una pestaña nueva)</span>
+                    </a>                </div>
 
             </div>
+        </header>
 
-            <!--================ CONTENIDO ===============-->
+        <!--================ CONTENIDO ================-->
 
-            <div class="project-content">
+        <div class="container cs-layout">
 
-                <!-- DESCRIPCION -->
+            <article class="cs-article">
 
-                <div class="project-description"
-                id="descripcion">
+                <!-- 01 PROBLEMA -->
 
-                <h2>
-                    Sobre el
-                    <span>proyecto</span>
-                </h2>
-
-                <p>
-
-                    Dulceria es una aplicacion web de comercio
-                    electronico desarrollada como proyecto final
-                    durante mi formacion en el SENA.
-                </p>
-
-                <p>
-
-                    El proyecto fue pensado para facilitar la 
-                    gestion de productos de una tienda de dulces
-                    y ofrecer una experiencia sencilla para los 
-                    usuarios.
-
-                </p>
-
-                <p>
-
-                    Durante su desarrollo trabaje en la estructura
-                    de la aplicacion, diseño de interfaces,
-                    funcionalidades y conexion con la base de datos.
-
-                </p>
-
-                <!-- FUNCIONALIDADES -->
-
-                <div class="project-features">
-
-                    <div class="feature-card">
-
-                        <h3>
-                             🔐 Inicio de sesion
-                        </h3>
-
-                        <p>
-
-                            Sistema de autenticacion para 
-                            usuarios registrados.
-
-                        </p>
-                    </div>
-
-                    <div class="feature-card">
-
-                        <h3>
-                             📝 Registro
-                        </h3>
-
-                        <p>
-
-                            Registro de nuevos usuarios
-                            dentro de la plataforma.
-                        </p>
-
-                    </div>
-
-                    <div class="feature-card">
-
-                        <h3>
-                            🔑 Recuperacion
-                        </h3>
-
-                        <p>
-                            Funcionalidad para recuperar
-                            el acceso a la cuenta.
-                        </p>
-
-                    </div>
-
-                    <div class="feature-card">
-
-                        <h3>
-                            📦 Productos 
-                        </h3>
-
-                        <p>
-                            Gestion y organizacion de los 
-                            productos de la tienda.
-                        </p>
-
-                    </div>
-
-                    <div class="feature-card">
-
-                        <h3>
-                            📊 Inventario
-                        </h3>
-
-                        <p>
-
-                            Control de productos disponibles
-                            dentro del sistema.
-                        </p>
-
-                    </div>
-
-                    <div class="feature-card">
-
-                        <h3>
-                            👤 Usuarios
-                        </h3>
-
-                        <p>
-                            Gestion de usuarios y acceso 
-                            a las funcionalidades.
-                        </p>
-
-                    </div>
-
-                </div>
-            
-            </div>
-
-            <!-- INFORMACION -->
-
-            <aside class="project-info">
-
-                <h2>
-                    Informacion
-                </h2>
-
-                <div class="project-info-item">
-
-                    <strong>
-                        Tipo
-                    </strong>
-
+                <section id="problema" class="cs-section" aria-labelledby="problema-title" data-reveal>
+                    <p class="eyebrow">01</p>
+                    <h2 id="problema-title" class="cs-section-title">El problema</h2>
                     <p>
-                        Proyecto academico
+                        Crazy Kid es una distribuidora de dulces que quería dar el paso a lo digital. Sus clientes necesitaban explorar
+                        el catálogo por tipo de dulce, enterarse de las promociones y armar un
+                        pedido sin tener que llamar o ir al punto de venta.
+                    </p>
+                    <p>
+                        Mi reto era convertir ese recorrido de compra en pantallas
+                        claras: encontrar un producto, compararlo, agregarlo al carrito y elegir
+                        cómo pagar.
+                    </p>
+                </section>
+
+                <!-- 02 ALCANCE -->
+
+                <section id="alcance" class="cs-section" aria-labelledby="alcance-title" data-reveal>
+                    <p class="eyebrow">02</p>
+                    <h2 id="alcance-title" class="cs-section-title">Alcance</h2>
+                    <p>
+                        El repositorio contiene 14 pantallas HTML. Esto es lo que cubren y lo que
+                        quedó por fuera de esta versión.
                     </p>
 
-                </div>
+                    <div class="cs-scope">
+                        <div class="cs-panel card">
+                            <h3 class="cs-panel-title">Incluido</h3>
+                            <ul class="cs-check-list">
+                                <li><strong>Inicio</strong> con carrusel de productos destacados.</li>
+                                <li><strong>Categorías</strong>: 8 tipos de confitería y 4 páginas de detalle (bombones, gomitas, mentolados y dulces blandos).</li>
+                                <li><strong>Ofertas del día</strong> con precio anterior y precio de promoción.</li>
+                                <li><strong>Carrito</strong> y <strong>pasarela de pago</strong> con tarjeta, PSE o efectivo.</li>
+                                <li><strong>Cuenta</strong>: registro, inicio de sesión y recuperación de contraseña.</li>
+                                <li><strong>Nosotros</strong>: quiénes somos, envíos y reseñas.</li>
+                            </ul>
+                        </div>
 
-                <div class="project-info-item">
-
-                    <strong>
-                        Formacion
-                    </strong>
-
-                    <p>
-                        ADSO - SENA
-                    </p>
-
-                </div>
-
-                <div class="project-info-item">
-
-                    <strong>
-                        Rol
-                    </strong>
-
-                    <p>
-                        Desarrolladora
-                    </p>
-
-                </div>
-
-                <div class="project-info-item">
-
-                    <strong>
-                        Tecnologias
-                    </strong>
-
-                    <div class="project-technologies">
-
-                        <span class="project-tech">
-                            HTML
-                        </span>
-
-                        <span class="project-tech">
-                            CSS
-                        </span>
-
-                        <span class="project-tech">
-                            JavaScript
-                        </span>
-
-                        <span class="project-tech">
-                            PHP
-                        </span>
-
-                        <span class="project-tech">
-                            MySQL
-                        </span>
-
+                        <div class="cs-panel card">
+                            <h3 class="cs-panel-title">Fuera de esta versión</h3>
+                            <ul class="cs-check-list cs-check-list--out">
+                                <li>No hay servidor ni base de datos: el carrito muestra productos fijos.</li>
+                                <li>La pasarela es una maqueta; no procesa pagos reales.</li>
+                                <li>Registro e inicio de sesión no guardan usuarios.</li>                            </ul>
+                        </div>
                     </div>
+                </section>
 
-                </div>
+                <!-- 03 MODELO DE DATOS -->
 
-            </aside>
+                <section id="modelo" class="cs-section" aria-labelledby="modelo-title" data-reveal>
+                    <p class="eyebrow">03</p>
+                    <h2 id="modelo-title" class="cs-section-title">Modelo de datos</h2>
+                    <p>
+                        Aunque esta versión no tiene base de datos, las pantallas dejan claro qué
+                        información maneja la tienda. Estas son las entidades que se desprenden de
+                        la interfaz y la base para llevarla a un modelo relacional.
+                    </p>
 
-            </div>
+                    <ul class="cs-entities">
+                        <li class="cs-entity">
+                            <p class="cs-entity-name">categoria</p>
+                            <ul class="cs-entity-fields">
+                                <li><span>id</span> PK</li>
+                                <li><span>nombre</span></li>
+                                <li><span>imagen</span></li>
+                            </ul>
+                        </li>
+                        <li class="cs-entity">
+                            <p class="cs-entity-name">producto</p>
+                            <ul class="cs-entity-fields">
+                                <li><span>id</span> PK</li>
+                                <li><span>categoria_id</span> FK</li>
+                                <li><span>nombre</span></li>
+                                <li><span>descripcion</span></li>
+                                <li><span>precio</span></li>
+                                <li><span>precio_oferta</span> nullable</li>
+                                <li><span>imagen</span></li>
+                            </ul>
+                        </li>
+                        <li class="cs-entity">
+                            <p class="cs-entity-name">usuario</p>
+                            <ul class="cs-entity-fields">
+                                <li><span>id</span> PK</li>
+                                <li><span>usuario</span> único</li>
+                                <li><span>correo</span> único</li>
+                                <li><span>contrasena_hash</span></li>
+                            </ul>
+                        </li>
+                        <li class="cs-entity">
+                            <p class="cs-entity-name">pedido</p>
+                            <ul class="cs-entity-fields">
+                                <li><span>id</span> PK</li>
+                                <li><span>usuario_id</span> FK</li>
+                                <li><span>metodo_pago</span> tarjeta · pse · efectivo</li>
+                                <li><span>total</span></li>
+                                <li><span>fecha</span></li>
+                            </ul>
+                        </li>
+                        <li class="cs-entity">
+                            <p class="cs-entity-name">detalle_pedido</p>
+                            <ul class="cs-entity-fields">
+                                <li><span>pedido_id</span> FK</li>
+                                <li><span>producto_id</span> FK</li>
+                                <li><span>cantidad</span></li>
+                                <li><span>precio_unitario</span></li>
+                            </ul>
+                        </li>
+                    </ul>
 
-        </section>
+                    <p class="cs-note">
+                        <strong>Por qué <code>precio_unitario</code> en el detalle:</strong> si el
+                        precio del producto cambia (por ejemplo, al terminar una oferta), el pedido
+                        debe conservar el valor que la persona realmente pagó.
+                    </p>
+                    <!-- [COMPLETAR: si tienes el diagrama ER o el script SQL original del proyecto, reemplaza esta sección por ese modelo] -->
+                </section>
+
+                <!-- 04 DECISIONES -->
+
+                <section id="decisiones" class="cs-section" aria-labelledby="decisiones-title" data-reveal>
+                    <p class="eyebrow">04</p>
+                    <h2 id="decisiones-title" class="cs-section-title">Decisiones técnicas</h2>
+
+                    <!-- [COMPLETAR: confirma o ajusta cada "por qué"; se dedujeron del código del repositorio] -->
+                    <ol class="decision-list">
+                        <li class="decision">
+                            <h3 class="decision-title">Bootstrap 5 como base de la interfaz</h3>
+                            <p class="decision-why">
+                                <span class="decision-why-label">Por qué</span>
+                                La grilla responsive y los componentes ya probados (carrusel,
+                                tarjetas, formularios) permitieron construir 14 pantallas con un
+                                estilo coherente y adaptadas a celular sin escribir todo desde cero.
+                            </p>
+                        </li>
+                        <li class="decision">
+                            <h3 class="decision-title">Una hoja de estilos por pantalla</h3>
+                            <p class="decision-why">
+                                <span class="decision-why-label">Por qué</span>
+                                Cada vista es independiente: cambiar una pantalla no afecta a las
+                                demás. El costo: el encabezado y el pie se repiten en cada HTML, así
+                                que un cambio en el menú hay que hacerlo en varias páginas.
+                            </p>
+                        </li>
+                        <li class="decision">
+                            <h3 class="decision-title">Validación del registro en el cliente</h3>
+                            <p class="decision-why">
+                                <span class="decision-why-label">Por qué</span>
+                                Sin servidor de por medio, era la forma de avisar de inmediato qué
+                                faltaba. El botón «Registrarse» empieza deshabilitado y se activa
+                                solo con los cuatro campos completos.
+                                <a class="cs-inline-link" href="https://github.com/alejandra08-lang/crazy-kids/blob/main/PROYECTO_V4/js/Registro.js" target="_blank" rel="noopener noreferrer">Ver Registro.js<span class="sr-only"> (se abre en una pestaña nueva)</span></a>
+                            </p>
+                        </li>
+                        <li class="decision">
+                            <h3 class="decision-title">Carrusel que se pausa con el cursor</h3>
+                            <p class="decision-why">
+                                <span class="decision-why-label">Por qué</span>
+                                El carrusel avanza cada 3 segundos; al pasar el cursor sobre una
+                                imagen se detiene para dar tiempo de leer la descripción del producto.
+                                <a class="cs-inline-link" href="https://github.com/alejandra08-lang/crazy-kids/blob/main/PROYECTO_V4/js/Home_page.js" target="_blank" rel="noopener noreferrer">Ver Home_page.js<span class="sr-only"> (se abre en una pestaña nueva)</span></a>
+                            </p>
+                        </li>
+                    </ol>
+                </section>
+
+                <!-- 05 CAPTURAS -->
+
+                <section id="capturas" class="cs-section" aria-labelledby="capturas-title" data-reveal>
+                    <p class="eyebrow">05</p>
+                    <h2 id="capturas-title" class="cs-section-title">Capturas</h2>
+
+                    <ul class="cs-gallery">
+                        <li>
+                            <figure>
+                                <img src="../assets/img/projects/dulceria/inicio.jpg" width="1280" height="800" loading="lazy" alt="Página de inicio: encabezado rosado con el logo de Crazy Kid, menú y buscador, carrusel de productos y categorías de confitería.">
+                                <figcaption>Inicio con carrusel de destacados</figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure>
+                                <img src="../assets/img/projects/dulceria/categorias.jpg" width="1280" height="800" loading="lazy" alt="Página de categorías con tarjetas para dulces duros, mentolados, gomitas y otros tipos de confitería.">
+                                <figcaption>Categorías de confitería</figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure>
+                                <img src="../assets/img/projects/dulceria/ofertas.jpg" width="1280" height="800" loading="lazy" alt="Ofertas del día: tarjetas de productos con el precio anterior tachado y el precio de promoción.">
+                                <figcaption>Ofertas del día</figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure>
+                                <img src="../assets/img/projects/dulceria/carrito.jpg" width="1280" height="800" loading="lazy" alt="Carrito de compras con dos productos, su precio, cantidad y el botón Pagar.">
+                                <figcaption>Carrito de compras</figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure>
+                                <img src="../assets/img/projects/dulceria/pasarela.jpg" width="1280" height="800" loading="lazy" alt="Resumen del pago con el total y las opciones de tarjeta de crédito o débito, PSE y efectivo.">
+                                <figcaption>Pasarela de pago</figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure>
+                                <img src="../assets/img/projects/dulceria/registro.jpg" width="1280" height="800" loading="lazy" alt="Formulario Crear cuenta con campos de usuario, correo, contraseña y confirmación, y el botón Registrarse deshabilitado.">
+                                <figcaption>Registro con validación</figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- 06 APRENDIZAJES -->
+
+                <section id="aprendizajes" class="cs-section" aria-labelledby="aprendizajes-title" data-reveal>
+                    <p class="eyebrow">06</p>
+                    <h2 id="aprendizajes-title" class="cs-section-title">Aprendizajes</h2>
+
+                    <!-- [COMPLETAR: revisa que estos aprendizajes sean tuyos] -->
+                    <ul class="cs-learnings">
+                        <li class="cs-panel card">
+                            <h3 class="cs-panel-title">Reutilizar antes que copiar</h3>
+                            <p>
+                                Repetir el encabezado en 14 archivos hace que cada cambio cueste
+                                más. En este portafolio lo resolví cargando navbar y footer como
+                                componentes.
+                            </p>
+                        </li>
+                        <li class="cs-panel card">
+                            <h3 class="cs-panel-title">Validar en el cliente no basta</h3>
+                            <p>
+                                Falta comprobar el formato del correo, que las contraseñas
+                                coincidan y repetir la validación en el servidor.
+                            </p>
+                        </li>
+                        <li class="cs-panel card">
+                            <h3 class="cs-panel-title">Los datos primero</h3>
+                            <p>
+                                Pensar el modelo (productos, pedidos y su detalle) desde el inicio
+                                facilita pasar de una maqueta a una tienda que funcione de verdad.
+                            </p>
+                        </li>
+                        <li class="cs-panel card">
+                            <h3 class="cs-panel-title">Pensar el recorrido completo</h3>
+                            <p>
+                                Hacer todas las pantallas me obligó a mantener coherentes la
+                                navegación, los estilos y el flujo de compra de punta a punta.
+                            </p>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- CIERRE -->
+
+                <aside class="cs-cta card" aria-label="Siguiente paso" data-reveal>
+                    <p class="cs-cta-text">¿Quieres conocer más sobre cómo trabajo?</p>
+                    <div class="btn-group">
+                        <a href="../index.html#contacto" class="btn btn--primary">Contactar</a>
+                        <a href="../index.html#proyectos" class="btn btn--secondary">Ver otros proyectos</a>
+                    </div>
+                </aside>
+
+            </article>
+
+            <!-- ÍNDICE (solo escritorio) -->
+
+            <nav class="cs-toc" aria-label="Secciones del caso de estudio">
+                <p class="cs-toc-title">En esta página</p>
+                <ol>
+                    <li><a href="#problema">El problema</a></li>
+                    <li><a href="#alcance">Alcance</a></li>
+                    <li><a href="#modelo">Modelo de datos</a></li>
+                    <li><a href="#decisiones">Decisiones técnicas</a></li>
+                    <li><a href="#capturas">Capturas</a></li>
+                    <li><a href="#aprendizajes">Aprendizajes</a></li>
+                </ol>
+            </nav>
+
+        </div>
 
     </main>
 
     <div id="site-footer"></div>
-    
-
-    <!--=============== JAVASCRIPT NAVBAR =================-->
 
     <script src="../assets/js/navbar.js"></script>
-
-    
+    <script src="../assets/js/animations.js"></script>
 </body>
+
 </html>

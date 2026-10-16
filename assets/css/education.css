@@ -1,0 +1,72 @@
+/* =========================================================
+   FORMACIÓN Y EXPERIENCIA — timeline con borde izquierdo.
+   ========================================================= */
+
+.timeline {
+    position: relative;
+    display: grid;
+    gap: var(--space-10);
+    max-width: 52rem;
+    padding-left: var(--space-8);
+    border-left: var(--border-strong);
+}
+
+.timeline-item {
+    position: relative;
+    display: grid;
+    gap: var(--space-2);
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    top: 0.45rem;
+    left: calc(var(--space-8) * -1 - 0.375rem);
+    width: 0.75rem;
+    height: 0.75rem;
+    border: 2px solid var(--color-accent-text);
+    border-radius: var(--radius-pill);
+    background: var(--color-bg);
+}
+
+.timeline-item:first-child::before {
+    background: var(--color-accent-text);
+}
+
+.timeline-period {
+    font-family: var(--font-mono);
+    font-size: var(--fs-mono);
+    letter-spacing: 0.04em;
+    color: var(--color-accent-text);
+}
+
+.timeline-title {
+    font-size: var(--fs-h3);
+}
+
+.timeline-place {
+    font-size: var(--fs-small);
+    color: var(--color-text-muted);
+}
+
+.timeline-list {
+    display: grid;
+    gap: var(--space-2);
+    margin-top: var(--space-2);
+}
+
+.timeline-list li {
+    position: relative;
+    padding-left: var(--space-5);
+    font-size: var(--fs-small);
+    line-height: 1.7;
+    max-width: var(--measure);
+}
+
+.timeline-list li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--color-text-muted);
+    font-family: var(--font-mono);
+}

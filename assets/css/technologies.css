@@ -1,0 +1,25 @@
+/* =========================================================
+   STACK — tecnologías agrupadas por categoría, sin porcentajes.
+   ========================================================= */
+
+.stack-grid {
+    display: grid;
+    gap: var(--space-4);
+}
+
+.stack-card {
+    display: grid;
+    align-content: start;
+    gap: var(--space-3);
+    padding: var(--space-6) var(--space-5);
+}
+
+.stack-card h3 {
+    font-size: var(--fs-body);
+}
+
+.stack-note {
+    margin-bottom: var(--space-2);
+    font-size: var(--fs-small);
+    color: var(--color-text-muted);
+}

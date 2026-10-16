@@ -1,0 +1,42 @@
+/* =========================================================
+   CÓMO TRABAJO — pasos numerados con su entregable.
+   ========================================================= */
+
+.process-list {
+    display: grid;
+    gap: var(--space-4);
+}
+
+.process-step {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    padding: var(--space-6) var(--space-5);
+}
+
+.process-number {
+    font-family: var(--font-mono);
+    font-size: var(--fs-small);
+    font-weight: var(--fw-bold);
+    color: var(--color-accent-text);
+}
+
+.process-step h3 {
+    font-size: var(--fs-body);
+}
+
+.process-step p {
+    font-size: var(--fs-small);
+    line-height: 1.65;
+    color: var(--color-text-muted);
+}
+
+.process-step .process-output {
+    margin-top: auto;
+    padding-top: var(--space-4);
+    border-top: 1px dashed var(--color-border-strong);
+    font-family: var(--font-mono);
+    font-size: var(--fs-mono);
+    line-height: 1.6;
+    color: var(--color-text-soft);
+}
